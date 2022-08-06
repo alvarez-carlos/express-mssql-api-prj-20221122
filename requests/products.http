@@ -1,0 +1,33 @@
+@products = http://localhost:3000/products
+
+GET {{products}}
+
+###
+POST {{products}}
+Content-Type: application/json
+
+{
+    "name": "TV",
+    "description": "LG",
+    "quantity":13
+}
+
+###
+GET {{products}}/7
+
+###
+DELETE {{products}}/1
+
+###
+GET {{products}}/total
+
+
+###
+PUT {{products}}/8
+Content-Type: application/json
+
+{
+    "name": "USB",
+    "description": "Maxell",
+    "quantity":2
+}
