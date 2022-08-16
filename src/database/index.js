@@ -1,2 +1,3 @@
-export {getConnection} from './connection'
-export {queries} from './queries'
+export {getDPCConnection} from './dpc_connection'
+export {ciQueries} from './ciQueries'
+export {pQueries} from './pQueries'

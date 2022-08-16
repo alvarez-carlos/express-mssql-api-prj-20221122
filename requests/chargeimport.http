@@ -1,0 +1,34 @@
+@chargeimport = http://localhost:5000/chargeimport
+
+GET {{chargeimport}}
+
+###
+POST {{chargeimport}}
+Content-Type: application/json
+
+{
+    "BillCoID" : "MPP",
+    "ClientID" : "VALDX",
+    "AccessionNo" : "444444"
+}
+
+###
+GET {{chargeimport}}/1003
+
+###
+DELETE {{chargeimport}}/1002
+
+###
+GET {{chargeimport}}/total
+
+
+###
+PUT {{chargeimport}}/3
+Content-Type: application/json
+
+{
+    "BillCoID" : "MPP",
+    "ClientID" : "VALDL",
+    "AccessionNo" : "3131313131"
+}
+

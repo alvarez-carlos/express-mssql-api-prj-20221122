@@ -10,12 +10,13 @@ const dbSettings = {
   database: DB_NAME || "",
   server: SERVER || "",
   options: {
-    encrypt: true, // for azure
-    trustServerCertificate: true, // change to true for local dev / self-signed certs
+    encrypt: false, // for azure
+    trustServerCertificate: false, // change to true for local dev / self-signed certs
   },
+  timezone: 'utc'
 };
 
-export const getConnection = async () => {
+export const getDPCConnection = async () => {
   try {
     const pool = await sql.connect(dbSettings);
     // const result = await pool.request().query("SELECT 1");

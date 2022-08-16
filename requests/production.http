@@ -1,0 +1,36 @@
+@production = http://localhost:5000/production
+
+GET {{production}}
+
+###
+POST {{production}}
+Content-Type: application/json
+
+{
+    "BillCoID" : "MPP",
+    "ClientID" : "VALDX",
+    "TransPostDate" : "1999-09-19",
+    "ChgImportID": 111111
+}
+
+###
+GET {{production}}/222222222
+
+###
+DELETE {{production}}/111111
+
+###
+GET {{production}}/total
+
+
+###
+PUT {{production}}/111111
+Content-Type: application/json
+
+{
+    "BillCoID" : "MPP",
+    "ClientID" : "PGEA",
+    "TransPostDate" : "1999-09-19",
+    "ChgImportID": 222222222
+}
+
