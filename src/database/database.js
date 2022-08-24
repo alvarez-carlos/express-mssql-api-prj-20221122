@@ -1,11 +1,15 @@
 import Sequelize from "sequelize";
 
+import config from "../config";
+
+const { DB_USER, DB_PWD, DB_NAME, SERVER } = config;
+
 export const sequelize = new Sequelize(
-  "DPC_Preprod", // db name,
-  "calvarez", // username
-  "awsPBKDF2!", // password
+  DB_NAME, // db name,
+  DB_USER, // username
+  DB_PWD, // password
   {
-      host: '10.40.2.110',
+    host: SERVER,
     dialect: "mssql",
     // pool: {
     //   max: 5,
